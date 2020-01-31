@@ -1,0 +1,10 @@
+LinuxCommandLineandShellScriptingBible 2017
+Crackingthecodinginterview 2015
+Cleancode 2008
+Thelittleprince 1943
+TheMythicalMan-Month 1995
+Arduinofordummies 2018
+ExploringArduino 2019
+ExploringRaspberry Pi 2016
+TheArtofInvisibility 2019
+SecurityinComputing 2015
