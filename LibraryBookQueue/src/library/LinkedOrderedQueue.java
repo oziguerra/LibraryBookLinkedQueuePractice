@@ -49,40 +49,48 @@ public class LinkedOrderedQueue<T extends Comparable<T>> extends LinkedQueue<T>
 		
 	}
 	
-	public void remove(T elementToRemove)
+	public void remove(T elementToRemove) throws EmptyCollectionException
 	{
 		LinearNode<T> current = head;
 		LinearNode<T> previous = null;
 		boolean bookToRemoveFound = false;
-		while(current != null  && !bookToRemoveFound)
+		if(head == null)
 		{
-			if(current.getElement().equals(elementToRemove))
+			throw new EmptyCollectionException("queue");
+		}
+		else
+		{
+			while(current != null  && !bookToRemoveFound)
 			{
-				System.out.println(elementToRemove.toString() + " removed");
-				if(previous == null)
+				if(current.getElement().equals(elementToRemove))
 				{
-					head = head.getNext();
+					System.out.println(elementToRemove.toString() + " removed");
+					if(previous == null)
+					{
+						head = head.getNext();
+					}
+					else
+					{
+						previous.setNext(current.getNext());
+					}
+					
+					bookToRemoveFound = true;
 				}
 				else
 				{
-					previous.setNext(current.getNext());
+					previous = current;
+					current = current.getNext();
 				}
 				
-				bookToRemoveFound = true;
-			}
-			else
-			{
-				previous = current;
-				current = current.getNext();
+		
 			}
 			
-	
+			if(!bookToRemoveFound)
+			{
+				System.out.println("The book " + elementToRemove.toString() + " was not found");
+			}
 		}
 		
-		if(!bookToRemoveFound)
-		{
-			System.out.println("The book " + elementToRemove.toString() + " was not found");
-		}
 	}
 	
 
