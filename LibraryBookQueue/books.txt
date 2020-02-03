@@ -5,6 +5,6 @@ Thelittleprince 1943
 TheMythicalMan-Month 1995
 Arduinofordummies 2018
 ExploringArduino 2019
-ExploringRaspberry Pi 2016
+ExploringRaspberryPi 2016
 TheArtofInvisibility 2019
-SecurityinComputing 2015
+SecurityinComputing 2016

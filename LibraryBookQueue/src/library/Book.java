@@ -7,10 +7,10 @@ public class Book implements Comparable<Book>{
 	
 	public Book()
 	{
-		this(0, "Empty book");
+		this("Empty book", 0);
 	}
 	
-	public Book(int pYear, String bTitle) 
+	public Book(String bTitle, int pYear) 
 	{
 		publicationYear = pYear;
 		bookTitle = bTitle;
@@ -64,8 +64,14 @@ public class Book implements Comparable<Book>{
 		}
 		
 		Book book = (Book) o;
-		return  (this.bookTitle == book.getBookTitle() && this.publicationYear == book.getPublicationYear());
-		
+		return (this.bookTitle.equals(book.getBookTitle()));
+	}
+	
+	
+	public String toString()
+	{
+		String bookDetails = "Title: " + this.bookTitle + ", Publication year: " + this.publicationYear;
+		return bookDetails;
 	}
 
 	
