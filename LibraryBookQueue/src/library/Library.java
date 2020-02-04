@@ -8,8 +8,14 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * @author Ozi_g
- *
+ * Name: Oziel Guerra
+ * Student Number: T00638044
+ * Assignment Number: 03
+ * Due Date: February 04, 2020
+ * 
+ * This program implements a LinkedOrderedQueue and a Book object to 
+ * simulate a library that organizes their books based on year, 
+ * oldest books being in the beginning of the list
  */
 public class Library {
 
@@ -18,18 +24,15 @@ public class Library {
 	 * @throws FileNotFoundException 
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-		
-		File bookFile = new File("books.txt");
+
 		Book tempBook;
-		//Test LinkedOrderedQueue
-		
 		LinkedOrderedQueue<Book> orderedQueue = new LinkedOrderedQueue<Book>();
-		File bookFileOrdered = new File("books.txt");
-		Scanner scanOrdered = new Scanner(bookFile);
+		File bookFile = new File("books.txt");
+		Scanner scan = new Scanner(bookFile);
 		
-		while(scanOrdered.hasNextLine())
+		while(scan.hasNextLine())
 		{
-			tempBook = new Book(scanOrdered.next(), scanOrdered.nextInt());
+			tempBook = new Book(scan.next(), scan.nextInt());
 			orderedQueue.enqueue(tempBook);
 		}
 		
@@ -46,7 +49,7 @@ public class Library {
 		//Test add in the beginning, somewhere in the middle, at the end
 		
 		
-		scanOrdered.close();
+		scan.close();
 		
 	}
 

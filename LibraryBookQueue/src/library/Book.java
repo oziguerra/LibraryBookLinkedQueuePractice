@@ -5,6 +5,7 @@ public class Book implements Comparable<Book>{
 	private String bookTitle;
 	private int publicationYear;
 	
+	//Creates an empty book
 	public Book()
 	{
 		this("Empty book", 0);
@@ -46,6 +47,7 @@ public class Book implements Comparable<Book>{
 		this.publicationYear = publicationYear;
 	}
 	
+	//Checks if a book is the same as another (based on title only)
 	public boolean equals(Object o)
 	{
 		if(this == o)
@@ -67,7 +69,7 @@ public class Book implements Comparable<Book>{
 		return (this.bookTitle.equals(book.getBookTitle()));
 	}
 	
-	
+	//Prints books details
 	public String toString()
 	{
 		String bookDetails = "Title: " + this.bookTitle + ", Publication year: " + this.publicationYear;
