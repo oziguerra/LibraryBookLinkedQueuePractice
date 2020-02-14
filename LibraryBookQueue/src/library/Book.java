@@ -1,16 +1,28 @@
 package library;
 
+/**
+ * Book class
+ * @author Ozi_g
+ *
+ */
 public class Book implements Comparable<Book>{
 
 	private String bookTitle;
 	private int publicationYear;
 	
-	//Creates an empty book
+	/**
+	 * Creates an empty book
+	 */
 	public Book()
 	{
 		this("Empty book", 0);
 	}
 	
+	/**
+	 * Creates a book with a title and publication year
+	 * @param bTitle
+	 * @param pYear
+	 */
 	public Book(String bTitle, int pYear) 
 	{
 		publicationYear = pYear;
@@ -47,7 +59,9 @@ public class Book implements Comparable<Book>{
 		this.publicationYear = publicationYear;
 	}
 	
-	//Checks if a book is the same as another (based on title only)
+	/**
+	 * Checks if a book is the same as another (based on title only)
+	 */
 	public boolean equals(Object o)
 	{
 		if(this == o)
@@ -69,7 +83,9 @@ public class Book implements Comparable<Book>{
 		return (this.bookTitle.equals(book.getBookTitle()));
 	}
 	
-	//Prints books details
+	/**
+	 * Returns a string of the book attributes
+	 */
 	public String toString()
 	{
 		String bookDetails = "Title: " + this.bookTitle + ", Publication year: " + this.publicationYear;

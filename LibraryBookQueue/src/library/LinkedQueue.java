@@ -101,7 +101,7 @@ public class LinkedQueue<T> implements QueueADT<T>
         String queueString = "[ ";
         while(temp != null)
         {
-        	queueString = queueString + ", " + temp.getElement();
+        	queueString = queueString + temp.getElement() + ", " + "\n";
         	temp = temp.getNext();
         }
         queueString = queueString + " ]";

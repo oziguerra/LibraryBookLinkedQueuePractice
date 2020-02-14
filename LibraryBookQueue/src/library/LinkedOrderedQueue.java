@@ -1,14 +1,15 @@
-/**
- * 
- */
 package library;
 
 /**
+ * LinkedOrderedQueue class built from LinkedQueue
  * @author Ozi_g
  *
  */
 public class LinkedOrderedQueue<T extends Comparable<T>> extends LinkedQueue<T> 
 {
+	/**
+	 * LinkedOrderedQueue constructor
+	 */
 	public LinkedOrderedQueue()
 	{
 		super();
@@ -16,7 +17,8 @@ public class LinkedOrderedQueue<T extends Comparable<T>> extends LinkedQueue<T>
 	
 	
 	/**
-	 * Enqueues an element in the order it should be at
+	 * Enqueues an element in the order it should be at depending
+	 * on the year
 	 * @param element T to be added to the queue in the correct position
 	 */
 	@Override
@@ -54,7 +56,11 @@ public class LinkedOrderedQueue<T extends Comparable<T>> extends LinkedQueue<T>
 		
 	}
 	
-	//Removes an element based on the name
+	/**
+	 * Removes an element based on element value
+	 * @param elementToRemove element to be removed
+	 * @throws EmptyCollectionException if queue is empty
+	 */
 	public void remove(T elementToRemove) throws EmptyCollectionException
 	{
 		LinearNode<T> current = head;
